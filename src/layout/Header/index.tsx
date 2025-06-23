@@ -20,7 +20,7 @@ const Header: FC<HeaderProps> = props => {
   const [fetchData, setFetchData] = useState<any>(null)
 
   useEffect(() => {
-    history.listen(state => {
+    history.listen((state:any) => {
       setNav(new Date().getTime())
       setSideId(router.indexOf(state.pathname))
     })

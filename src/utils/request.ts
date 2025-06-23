@@ -4,7 +4,7 @@ const instance = axios.create({
   baseURL:
     process.env.NODE_ENV === 'production'
       ? 'http://music.rayhomie.icu'
-      : 'http://localhost:3333/api',
+      : 'http://localhost:3200',
   headers: {
     // 'Content-Type': 'application/json',
     // Accept: '*/*',
