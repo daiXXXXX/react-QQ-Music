@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import PlayListModal from '@/components/PlayListModal'
 import usePlayer from '@/model/player/usePlayer'
-import styles from './index.less'
 
 interface MusicListModalProps {}
 

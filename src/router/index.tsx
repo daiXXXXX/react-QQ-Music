@@ -39,7 +39,7 @@ const MyRouter = () => {
   const { setBottom, singerTab } = useScroll()
   return (
     <BrowserRouter>
-      <Menu />
+      {/* <Menu /> */}
       <div className={styles.rightContainer}>
         <Header />
         <div

@@ -6,7 +6,7 @@ import { CardListProps, DataType } from './index.d'
 import { numberFormat } from '@/utils/common'
 import styles from './index.less'
 
-const CardList: FC<CardListProps> = ({ data, size = 8, showListenNum = false, onPlay, onView }) => {
+const CardList: FC<CardListProps> = ({ data, size = 5, showListenNum = false, onPlay, onView }) => {
   const [list, setList] = useState<DataType[]>([])
   const [current, setCurrent] = useState<number>(1)
   const [show, setShow] = useState<boolean>(false)

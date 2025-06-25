@@ -1,5 +1,7 @@
 import React, { FC, useEffect, useState } from 'react'
 import Search from '@/components/Search'
+import Icon from '@/components/Icon'
+import OnlineMusic from '../Menu/OnlineMusic'
 import Navigation from './Navigation'
 import { SearchOutlined } from '@ant-design/icons'
 import { useHistory } from 'react-router-dom'
@@ -46,14 +48,6 @@ const Header: FC<HeaderProps> = props => {
     setFetchData(data)
   }
 
-  const onForward = () => {
-    history.goForward()
-  }
-
-  const onBack = () => {
-    history.goBack()
-  }
-
   const onSearch = (value: string) => {
     history.push('/CommonSearch', { key: value, remoteplace: 'song' })
   }
@@ -64,10 +58,11 @@ const Header: FC<HeaderProps> = props => {
 
   return (
     <div className={styles.container}>
-      <Navigation onForward={onForward} onBack={onBack} />
+      {/* <Navigation onForward={onForward} onBack={onBack} /> */}
+      <Icon className={styles.logo} type="icon-qqmusic" />
       <Search
         prefix={<SearchOutlined />}
-        placeholder="搜索音乐"
+        placeholder="搜索音乐，MV，歌单，用户"
         onSearch={onSearch}
         onChange={debounce(onChange, 500)}
         searchData={fetchData}
